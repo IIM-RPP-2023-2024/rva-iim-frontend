@@ -1,3 +1,8 @@
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,6 +16,7 @@ import { StavkaPorudzbineComponent } from './main/stavka-porudzbine/stavka-porud
 import { HomeComponent } from './utility/home/home.component';
 import { AboutComponent } from './utility/about/about.component';
 import { AuthorComponent } from './utility/author/author.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,13 @@ import { AuthorComponent } from './utility/author/author.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
