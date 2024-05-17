@@ -19,6 +19,15 @@ import { HomeComponent } from './utility/home/home.component';
 import { AboutComponent } from './utility/about/about.component';
 import { AuthorComponent } from './utility/author/author.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ArtiklDialogComponent } from './dialogs/artikl-dialog/artikl-dialog.component';
+import { DobavljacDialogComponent } from './dialogs/dobavljac-dialog/dobavljac-dialog.component';
+import { PorudzbinaDialogComponent } from './dialogs/porudzbina-dialog/porudzbina-dialog.component';
+import { StavkaProduzbineDialogComponent } from './dialogs/stavka-produzbine-dialog/stavka-produzbine-dialog.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +38,11 @@ import { HttpClientModule } from '@angular/common/http';
     StavkaPorudzbineComponent,
     HomeComponent,
     AboutComponent,
-    AuthorComponent
+    AuthorComponent,
+    ArtiklDialogComponent,
+    DobavljacDialogComponent,
+    PorudzbinaDialogComponent,
+    StavkaProduzbineDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +55,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatTableModule,
     MatToolbarModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

@@ -3,6 +3,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Artikl } from 'src/app/models/artikl';
 import { Subscription } from 'rxjs';
 import { ArtiklService } from 'src/app/services/artikl.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ArtiklDialogComponent } from 'src/app/dialogs/artikl-dialog/artikl-dialog.component';
 
 @Component({
   selector: 'app-artikl',
@@ -15,7 +17,7 @@ export class ArtiklComponent implements OnInit, OnDestroy{
   dataSource!:MatTableDataSource<Artikl>;
   subsription!:Subscription;
 
-  constructor(private service:ArtiklService){}
+  constructor(private service:ArtiklService, public dialog:MatDialog){}
 
   ngOnInit(): void {
     this.loadData();
@@ -34,6 +36,17 @@ export class ArtiklComponent implements OnInit, OnDestroy{
     (error:Error) => {
       console.log(error.name + ' ' + error.message);
     }
+  }
+
+  public openDialog(flag:number, id?:number, naziv?:string, proizvodjac?: string) {
+    const dialogRef = this.dialog.open(ArtiklDialogComponent, { data: {id, naziv, proizvodjac }});
+    dialogRef.componentInstance.flag = flag;
+    dialogRef.afterClosed().subscribe(
+      (result) => {
+        (result == 1)
+          this.loadData();
+      }
+    )
   }
 
 }
