@@ -22,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArtiklDialogComponent } from './dialogs/artikl-dialog/artikl-dialog.component';
 import { DobavljacDialogComponent } from './dialogs/dobavljac-dialog/dobavljac-dialog.component';
 import { PorudzbinaDialogComponent } from './dialogs/porudzbina-dialog/porudzbina-dialog.component';
-import { StavkaProduzbineDialogComponent } from './dialogs/stavka-produzbine-dialog/stavka-produzbine-dialog.component';
+import { StavkaPorudzbineDialogComponent } from './dialogs/stavka-porduzbine-dialog/stavka-porudzbine-dialog.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -46,7 +46,7 @@ import { MatSelectModule } from '@angular/material/select';
     ArtiklDialogComponent,
     DobavljacDialogComponent,
     PorudzbinaDialogComponent,
-    StavkaProduzbineDialogComponent
+    StavkaPorudzbineDialogComponent
   ],
   imports: [
     BrowserModule,

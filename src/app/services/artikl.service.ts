@@ -15,7 +15,7 @@ export class ArtiklService {
     return this.httpClient.get(`${ARTIKL_URL}`);
   }
 
-  public createArtikl(artikl:Artikl):Observable<any>{
+  public addArtikl(artikl:Artikl):Observable<any>{
     return this.httpClient.post(`${ARTIKL_URL}`, artikl);
   }
 

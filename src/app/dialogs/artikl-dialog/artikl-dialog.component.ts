@@ -20,7 +20,7 @@ export class ArtiklDialogComponent {
   ) {  }
 
   public add() {
-    this.service.createArtikl(this.data).subscribe(
+    this.service.addArtikl(this.data).subscribe(
       (data) => {
         this.snackBar.open(`Artikl sa nazivom ${data.naziv} je uspešno dodat`, "U redu", {duration: 3500});
       }
