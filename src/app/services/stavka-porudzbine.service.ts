@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { STAVKA_PORUDZBINE_URL } from '../constants';
+import { STAVKA_BY_PORUDZBINA_URL, STAVKA_PORUDZBINE_URL } from '../constants';
 import { StavkaPorudzbine } from '../models/stavka-porudzbine';
 
 @Injectable({
@@ -25,5 +25,9 @@ export class StavkaPorudzbineService {
 
   public deleteStavkaPorudzbine(stavkaPorudzbineId:number):Observable<any>{
     return this.httpClient.delete(`${STAVKA_PORUDZBINE_URL}/id/${stavkaPorudzbineId}`, {responseType:"text"});
+  }
+
+  public getStavkaByPorudzbina(porudzbinaId:number):Observable<any>{
+    return this.httpClient.get(`${STAVKA_BY_PORUDZBINA_URL}/${porudzbinaId}`);
   }
 }

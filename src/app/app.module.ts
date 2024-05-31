@@ -32,6 +32,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -67,6 +69,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatNativeDateModule,
     MatCheckboxModule,
     MatSelectModule,
+    MatSortModule,
+    MatPaginatorModule,
     FormsModule,
     HttpClientModule
   ],
